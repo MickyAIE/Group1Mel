@@ -1,0 +1,15 @@
+if rotate yes
+timer = true
+
+out of previous if statement
+if timer true
+timer runs
+if timer reaches defined number
+timer = false
+timer set 0
+desired rotation (X17,Y-122, Z 00)
+set camera to above numbers
+
+(to make moveing smoother)
+while not at set position 
+lurp from current position to desired position

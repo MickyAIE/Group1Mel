@@ -1,15 +1,10 @@
-if rotate yes
-timer = true
+weapons
 
-out of previous if statement
-if timer true
-timer runs
-if timer reaches defined number
-timer = false
-timer set 0
-desired rotation (X17,Y-122, Z 00)
-set camera to above numbers
-
-(to make moveing smoother)
-while not at set position 
-lurp from current position to desired position
+all weapons off(ticked off in inspector/inactive)
+arm rest position
+when button(probably 1-9) pressed
+animation to weapon specific position
+turn specified weapon on(ticked on in inspector)
+connect animation from idle in animator right click connection make trigger
+when attack button (left mouse button probably)
+attack animation with return to weapon ready position

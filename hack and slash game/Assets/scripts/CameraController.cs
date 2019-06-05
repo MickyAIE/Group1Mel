@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     //camera controll script must be placed on a camera rig(empty object) with the camera as a child
-    //camera return to home kind of fast could be slowed down if time permits
+    //camera return to home kind of fast could be slowed down
     //camera script done by rick
 
     public float m_DampTime = 0.2f;

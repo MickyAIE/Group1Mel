@@ -325,7 +325,6 @@ MonoBehaviour:
   _2hSword: {fileID: 361619977}
   _Kniferight: {fileID: 489799070}
   _Knifeleft: {fileID: 615018018}
-  timer: 2
 --- !u!4 &162663957
 Transform:
   m_ObjectHideFlags: 0
@@ -533,7 +532,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 390164302}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -838,7 +837,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886352043}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -894,15 +893,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4663068003587730, guid: a7aa79354b5e49847a8ed468cd221def, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.0499988
+      value: -3.08
       objectReference: {fileID: 0}
     - target: {fileID: 4663068003587730, guid: a7aa79354b5e49847a8ed468cd221def, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.10692985
+      value: -0.711
       objectReference: {fileID: 0}
     - target: {fileID: 4663068003587730, guid: a7aa79354b5e49847a8ed468cd221def, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.8199992
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 4663068003587730, guid: a7aa79354b5e49847a8ed468cd221def, type: 2}
       propertyPath: m_LocalRotation.x
@@ -940,7 +939,13 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 65359878969082032, guid: a7aa79354b5e49847a8ed468cd221def,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65561745130885258, guid: a7aa79354b5e49847a8ed468cd221def, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: a7aa79354b5e49847a8ed468cd221def, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1005064385
@@ -951,7 +956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1005064386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enviroment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1073,7 +1078,7 @@ GameObject:
   - component: {fileID: 1229117622}
   - component: {fileID: 1229117621}
   - component: {fileID: 1229117620}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1210,7 +1215,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1655102245874426, guid: 3441baa438d505b4883b45e5f2231b1a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4235299888374306, guid: 3441baa438d505b4883b45e5f2231b1a, type: 2}
       propertyPath: m_LocalScale.x
@@ -1443,7 +1448,7 @@ MonoBehaviour:
   dashTime: 0
   layer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   MoveSpeed: 12
   gravityMod: 1.2
   cameraObject: {fileID: 144405949}

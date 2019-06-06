@@ -1,0 +1,10 @@
+weapons
+
+all weapons off(ticked off in inspector/inactive)
+arm rest position
+when button(probably 1-9) pressed
+animation to weapon specific position
+turn specified weapon on(ticked on in inspector)
+connect animation from idle in animator right click connection make trigger
+when attack button (left mouse button probably)
+attack animation with return to weapon ready position

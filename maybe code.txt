@@ -4,7 +4,13 @@ all weapons off(ticked off in inspector/inactive)
 arm rest position
 when button(probably 1-9) pressed
 animation to weapon specific position
+wait for animation to end
 turn specified weapon on(ticked on in inspector)
 connect animation from idle in animator right click connection make trigger
 when attack button (left mouse button probably)
 attack animation with return to weapon ready position
+
+Enemy ai
+if player is close enough(find range) move closer
+when enemy enter attack range then attack
+if player leaves find range go back to predetermined area

@@ -40,12 +40,12 @@ public class CameraController : MonoBehaviour
 
     private void Awake()
     {
-        m_target = GameObject.FindGameObjectWithTag("Player").transform;
+        m_target = GameObject.FindGameObjectWithTag("Player").transform;//find player and get it's transform
     }
 
     private void FixedUpdate()
     {
-        Move();
+        Move();//run move script
     }
     private void Update()
     {

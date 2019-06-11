@@ -4,38 +4,48 @@ using UnityEngine;
 
 public class WeaponSelect : MonoBehaviour
 {
+    //needs to be put on a gamemanager(empty object)
+    //the public gameobjects need to be filled in unity
     public Animator animation_controller;
     public GameObject _Sword;
     public GameObject _Axe;
     public GameObject _2hSword;
     public GameObject _Kniferight;
-    public GameObject _Knifeleft;
 
     private bool weaponOut = false;
-
+    //is weapon out, default no
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))//if number 1 on keyboard pressed do following
         {
-            if(weaponOut == true)
+            if(weaponOut == true)//if a weapon is currently in the players hand do following
             {
-                animation_controller.SetTrigger("ArmReturn");
+                animation_controller.SetTrigger("ArmReturn");//return hand to default position
+                //set all weapons to false
                 _Axe.SetActive(false);
                 _2hSword.SetActive(false);
                 _Kniferight.SetActive(false);
-                _Knifeleft.SetActive(false);
                 _Sword.SetActive(false);
+                //allow new weapon to be drawn
                 animation_controller.SetBool("SwordActive", false);
+                animation_controller.SetBool("axeActive", false);
+                animation_controller.SetBool("SwordActive", false);
+                animation_controller.SetBool("SwordActive", false);
+                // is the weapon out reset to default
                 weaponOut = false;
             }
-            else
+            else//if no weapon is out
             {
+                //don't allow a new weapon to be drawn
                 animation_controller.SetBool("SwordActive", true);
+                //allow sword to be seen
                 _Sword.SetActive(true);
+                //is a weapon out set to true
                 weaponOut = true;
             }
         }
+        //the rest just copy the first just with the weapon to be drawn being different
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             if (weaponOut == true)
@@ -44,14 +54,16 @@ public class WeaponSelect : MonoBehaviour
                 _Axe.SetActive(false);
                 _2hSword.SetActive(false);
                 _Kniferight.SetActive(false);
-                _Knifeleft.SetActive(false);
                 _Sword.SetActive(false);
+                animation_controller.SetBool("SwordActive", false);
+                animation_controller.SetBool("axeActive", false);
+                animation_controller.SetBool("SwordActive", false);
                 animation_controller.SetBool("SwordActive", false);
                 weaponOut = false;
             }
             else
             {
-                animation_controller.SetBool("SwordActive", true);
+                animation_controller.SetBool("axeActive", true);
                 _Axe.SetActive(true);
                 weaponOut = true;
             }
@@ -64,7 +76,6 @@ public class WeaponSelect : MonoBehaviour
                 _Axe.SetActive(false);
                 _2hSword.SetActive(false);
                 _Kniferight.SetActive(false);
-                _Knifeleft.SetActive(false);
                 _Sword.SetActive(false);
                 animation_controller.SetBool("SwordActive", false);
                 weaponOut = false;
@@ -84,7 +95,6 @@ public class WeaponSelect : MonoBehaviour
                 _Axe.SetActive(false);
                 _2hSword.SetActive(false);
                 _Kniferight.SetActive(false);
-                _Knifeleft.SetActive(false);
                 _Sword.SetActive(false);
                 animation_controller.SetBool("SwordActive", false);
                 weaponOut = false;
@@ -93,7 +103,6 @@ public class WeaponSelect : MonoBehaviour
             {
                 animation_controller.SetBool("SwordActive", true);
                 _Kniferight.SetActive(true);
-                _Knifeleft.SetActive(true);
                 weaponOut = true;
             }
         }

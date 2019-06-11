@@ -6,20 +6,18 @@ public class Attack : MonoBehaviour {
 
     public LayerMask mask;
     public Camera cam;
-    public GameObject hand;
-    Animation handAnim;
+    //public GameObject hand;
+    public Animator animator_attack;//animator needs to be placed on "player"
     bool startFrames;
     float Timer;
     float timeToWait = 0.2f;
-
-    // Use this for initialization
+    
     void Start()
     {
         //handAnim = hand.GetComponent<Animator>();
         //sword = hand.GetComponentInChildren<Weapon>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
 
@@ -31,7 +29,7 @@ public class Attack : MonoBehaviour {
         {
             startFrames = true;
         }
-        startingFrames();
+        //startingFrames();
     }
 
     private void OnTriggerStay(Collider other)
@@ -43,10 +41,12 @@ public class Attack : MonoBehaviour {
     {
         Debug.Log("Attack");
 
+        animator_attack.SetTrigger("attack_anim");//do attack animation
+
         RaycastHit hit;
 
         Vector3 p1 = transform.position;
-        float distanceToObstacle = 0;
+        //float distanceToObstacle = 0;
 
         Collider[] Enemy = Physics.OverlapCapsule(gameObject.transform.position, gameObject.transform.forward * 1, 1f, mask);
 
@@ -54,8 +54,8 @@ public class Attack : MonoBehaviour {
         {
             if (Enemy[i].tag == "Enemy")
             {
-                //EnemyHP hitEnemy = Enemy[i].GetComponent<EnemyHP>();
-                //hitEnemy.TakeDamage(3f);
+                EnemyHP hitEnemy = Enemy[i].GetComponent<EnemyHP>();
+                hitEnemy.TakeDamage(3f);
             }
         }
     }
@@ -67,10 +67,10 @@ public class Attack : MonoBehaviour {
             if (Timer > timeToWait)
             {
 
-                RaycastHit hit;
+                //RaycastHit hit;
 
                 Vector3 p1 = transform.position;
-                float distanceToObstacle = 0;
+                //float distanceToObstacle = 0;
 
                 Collider[] Enemy = Physics.OverlapCapsule(gameObject.transform.position, gameObject.transform.forward * 1, 1, mask);
 

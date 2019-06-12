@@ -12,7 +12,7 @@ public class WeaponSelect : MonoBehaviour
     public GameObject _2hSword;
     public GameObject _Kniferight;
 
-    private bool weaponOut = false;
+    public bool weaponOut = false;
     //is weapon out, default no
 
     void Update()
@@ -30,8 +30,8 @@ public class WeaponSelect : MonoBehaviour
                 //allow new weapon to be drawn
                 animation_controller.SetBool("SwordActive", false);
                 animation_controller.SetBool("axeActive", false);
-                animation_controller.SetBool("SwordActive", false);
-                animation_controller.SetBool("SwordActive", false);
+                animation_controller.SetBool("2HActive", false);
+                animation_controller.SetBool("knifeActive", false);
                 // is the weapon out reset to default
                 weaponOut = false;
             }
@@ -57,8 +57,8 @@ public class WeaponSelect : MonoBehaviour
                 _Sword.SetActive(false);
                 animation_controller.SetBool("SwordActive", false);
                 animation_controller.SetBool("axeActive", false);
-                animation_controller.SetBool("SwordActive", false);
-                animation_controller.SetBool("SwordActive", false);
+                animation_controller.SetBool("2HActive", false);
+                animation_controller.SetBool("knifeActive", false);
                 weaponOut = false;
             }
             else
@@ -72,17 +72,20 @@ public class WeaponSelect : MonoBehaviour
         {
             if (weaponOut == true)
             {
-                animation_controller.SetTrigger("ArmReturn");
+                animation_controller.SetTrigger("2HArmReturn");
                 _Axe.SetActive(false);
                 _2hSword.SetActive(false);
                 _Kniferight.SetActive(false);
                 _Sword.SetActive(false);
                 animation_controller.SetBool("SwordActive", false);
+                animation_controller.SetBool("axeActive", false);
+                animation_controller.SetBool("2HActive", false);
+                animation_controller.SetBool("knifeActive", false);
                 weaponOut = false;
             }
             else
             {
-                animation_controller.SetBool("SwordActive", true);
+                animation_controller.SetBool("2HActive", true);
                 _2hSword.SetActive(true);
                 weaponOut = true;
             }
@@ -97,11 +100,14 @@ public class WeaponSelect : MonoBehaviour
                 _Kniferight.SetActive(false);
                 _Sword.SetActive(false);
                 animation_controller.SetBool("SwordActive", false);
+                animation_controller.SetBool("axeActive", false);
+                animation_controller.SetBool("2HActive", false);
+                animation_controller.SetBool("knifeActive", false);
                 weaponOut = false;
             }
             else
             {
-                animation_controller.SetBool("SwordActive", true);
+                animation_controller.SetBool("knifeActive", true);
                 _Kniferight.SetActive(true);
                 weaponOut = true;
             }

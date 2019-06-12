@@ -7,7 +7,7 @@ public class Attack : MonoBehaviour {
     public LayerMask mask;
     public Camera cam;
     //public GameObject hand;
-    public Animator animator_attack;//animator needs to be placed on "player"
+    public Animator animator_controller;//animator needs to be placed on "player"
     bool startFrames;
     float Timer;
     float timeToWait = 0.2f;
@@ -23,7 +23,7 @@ public class Attack : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            DoAttack();
+                DoAttack();
         }
         if (Input.GetKeyDown(KeyCode.RightShift))
         {
@@ -41,7 +41,7 @@ public class Attack : MonoBehaviour {
     {
         Debug.Log("Attack");
 
-        animator_attack.SetTrigger("attack_anim");//do attack animation
+        animator_controller.SetTrigger("attack_anim");//do attack animation
 
         RaycastHit hit;
 

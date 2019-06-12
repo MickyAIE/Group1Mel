@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public Image HealthMeter;
     public float Health = 50f;
     private Rigidbody m_Rigidbody;
-    private float regenTime = 0.1f;
+    //private float regenTime = 0.1f;
     float Timer;
 
     // get a refrence to the Rigidbody, make a variable for the rigidbody
@@ -34,23 +34,23 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        Regenerate();
+        //Regenerate();
     }
 
-    void Regenerate()
-    {
-        if(m_Rigidbody.velocity.magnitude < 1 && Timer < 0)
-        {
-            Health += 0.5f;
-            Health = Mathf.Clamp(Health, 0f, 50f);
-            HealthMeter.fillAmount = Health / 50;
-            Timer = regenTime;
-        }
-        else
-        {
-            Timer -= Time.deltaTime;
-        }
-    }
+   // void Regenerate()
+   // {
+       // if(m_Rigidbody.velocity.magnitude < 1 && Timer < 0)
+       // {
+          //  Health += 0.5f;
+           // Health = Mathf.Clamp(Health, 0f, 50f);
+           // HealthMeter.fillAmount = Health / 50;
+            //Timer = regenTime;
+       // }
+       // else
+      //  {
+           // Timer -= Time.deltaTime;
+      //  }
+   // }
 
     // make a function, eg void RegenHealth()
     /*

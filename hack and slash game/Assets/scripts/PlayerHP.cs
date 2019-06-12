@@ -34,7 +34,7 @@ public class PlayerHP : MonoBehaviour {
 
     private void Update()
     {
-        Regenerate();
+       // Regenerate();
     }
 
     void Regenerate()

@@ -71,7 +71,7 @@ public class Movement : MonoBehaviour {
 
         if (Physics.Raycast(gameObject.transform.position + Vector3.up, Vector3.down, 1.1f, layer))
         {
-            Debug.Log("Can Jump");
+            //Debug.Log("Can Jump");
             if (Input.GetButtonDown("Jump"))
             {
                 Debug.Log("Jump");

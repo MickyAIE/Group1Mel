@@ -7,10 +7,11 @@ public class Attack : MonoBehaviour {
     public LayerMask mask;
     public Camera cam;
     //public GameObject hand;
-    public Animator animator_controller;//animator needs to be placed on "player"
+    public Animator animator_controller;//animator needs to be placed on "player" i(rick) made the player into a prefab
     bool startFrames;
     float Timer;
     float timeToWait = 0.2f;
+    public WeaponSelect weaponselect;
     
     void Start()
     {
@@ -23,7 +24,10 @@ public class Attack : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            if(weaponselect.weaponOut == true)
+            {
                 DoAttack();
+            }
         }
         if (Input.GetKeyDown(KeyCode.RightShift))
         {

@@ -15,7 +15,8 @@ public class FollowPlayer : MonoBehaviour {
     public float DetectionRange = 5f;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         agent = GetComponent<NavMeshAgent>();
 	}
 	

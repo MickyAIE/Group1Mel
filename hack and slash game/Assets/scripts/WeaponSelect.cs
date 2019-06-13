@@ -6,6 +6,7 @@ public class WeaponSelect : MonoBehaviour
 {
     //needs to be put on a gamemanager(empty object)
     //the public gameobjects need to be filled in unity
+    //gamemanager then needs to be placed in attack script on the player
     public Animator animation_controller;
     public GameObject _Sword;
     public GameObject _Axe;

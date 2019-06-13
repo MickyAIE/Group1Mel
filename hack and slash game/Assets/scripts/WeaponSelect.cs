@@ -11,7 +11,7 @@ public class WeaponSelect : MonoBehaviour
     public GameObject _Axe;
     public GameObject _2hSword;
     public GameObject _Kniferight;
-
+    [HideInInspector]
     public bool weaponOut = false;
     //is weapon out, default no
 

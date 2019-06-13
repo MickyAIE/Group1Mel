@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
-    public GameObject ui;
+    public GameObject ui;//pausemenu ui the pause menu in essence
 
     public string menuSceneName = "MainMenu";
 
@@ -16,33 +16,33 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-            Toggle();
+            Toggle();//turn on pause menu
         }
     }
 	
     public void Toggle()
     {
-        ui.SetActive(!ui.activeSelf);
+        ui.SetActive(!ui.activeSelf);//activate pause menu
 
         if (ui.activeSelf)
         {
-            Time.timeScale = 0f;
+            Time.timeScale = 0f;//stop game
         }
         else
         {
-            Time.timeScale = 1f;
+            Time.timeScale = 1f;//return game to normal speed
         }
     }
 
     public void Retry()
     {
         Toggle();
-        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);//use scene fader to restart scene
     }
 
     public void Menu()
     {
         Toggle();
-        sceneFader.FadeTo(menuSceneName);
+        sceneFader.FadeTo(menuSceneName);//use scene fader to go to main menu
     }
 }

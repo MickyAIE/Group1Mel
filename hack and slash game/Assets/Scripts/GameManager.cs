@@ -5,17 +5,17 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     //look into textmeshpro - text
-    public static bool GameIsOver;
+    public static bool GameIsOver;//is game over
 
-    public GameObject gameOverUI;
-    public GameObject completeLevelUI;
-    public SceneFader sceneFader;
+    public GameObject gameOverUI;//what shows when game over
+    public GameObject completeLevelUI;//what show when level complete
+    public SceneFader sceneFader;//scene fader check scene fader script
 
     private void Start()
     {
-        GameIsOver = false;
+        GameIsOver = false;//game not over
 
-        Time.timeScale = 1f;
+        Time.timeScale = 1f;//speed set to normal
     }
 
     void Update()
@@ -26,15 +26,15 @@ public class GameManager : MonoBehaviour
     
     void EndGame()
     {
-        GameIsOver = true;
+        GameIsOver = true;//game is over
 
-        gameOverUI.SetActive(true);
+        gameOverUI.SetActive(true);//show game over ui
     }
 
     public void WinLevel()
     {
-        GameIsOver = true;
-        completeLevelUI.SetActive(true);
+        GameIsOver = true;//game is over
+        completeLevelUI.SetActive(true);//show level complete ui
     }
 
 }

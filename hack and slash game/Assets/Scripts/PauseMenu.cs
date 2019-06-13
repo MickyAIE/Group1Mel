@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject ui;//pausemenu ui the pause menu in essence
+    public GameObject Controls_UI;//contols ui needed to make the controls appear and disappear
 
     public string menuSceneName = "MainMenu";
 
@@ -31,6 +32,7 @@ public class PauseMenu : MonoBehaviour
         else
         {
             Time.timeScale = 1f;//return game to normal speed
+            Controls_UI.SetActive(false);
         }
     }
 
@@ -44,5 +46,16 @@ public class PauseMenu : MonoBehaviour
     {
         Toggle();
         sceneFader.FadeTo(menuSceneName);//use scene fader to go to main menu
+    }
+    public void Controls()
+    {
+        if (Controls_UI.activeSelf)
+        {
+            Controls_UI.SetActive(false);
+        }
+        else
+        {
+            Controls_UI.SetActive(true);
+        }
     }
 }

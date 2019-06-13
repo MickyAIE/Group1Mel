@@ -28,7 +28,7 @@ public class SceneFader : MonoBehaviour
         {
             t -= Time.deltaTime;//count down using real time
             float a = curve.Evaluate(t);//use curvature thing to figure out how "fast" to do fadein
-            img.color = new Color(0f, 0f, 0f, a);//make image black
+            img.color = new Color(0f, 0f, 0f, a);//i have no idea
             yield return 0;//return + something extra
         }
     }

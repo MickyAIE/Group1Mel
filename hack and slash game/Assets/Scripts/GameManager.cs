@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;//speed set to normal
     }
-    private bool NoEnemies()
+    private bool NoEnemies()//counts down how many enemies are left
     {
         int numenemsLeft = 0;
 

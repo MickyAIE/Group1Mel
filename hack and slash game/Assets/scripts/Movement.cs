@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
+    public Animator animation_controller;
     public float speed = 12;
     public float strafeSpeed = 6f;
 
@@ -59,6 +60,8 @@ public class Movement : MonoBehaviour {
         {
             transform.rotation = Quaternion.LookRotation(finalDirection);
         }
+
+        animation_controller.SetFloat("walking_float", _rb.velocity.magnitude);
 
         Debug.DrawRay(transform.position + Vector3.up, finalDirection, Color.red, 1);
         /*

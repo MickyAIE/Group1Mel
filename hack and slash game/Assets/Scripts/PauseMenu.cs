@@ -47,15 +47,15 @@ public class PauseMenu : MonoBehaviour
         Toggle();
         sceneFader.FadeTo(menuSceneName);//use scene fader to go to main menu
     }
-    public void Controls()
+    public void Controls()//controls_panel found under pausemenu under overlay canvas
     {
         if (Controls_UI.activeSelf)
         {
-            Controls_UI.SetActive(false);
+            Controls_UI.SetActive(false);//make controls_panel disappear
         }
         else
         {
-            Controls_UI.SetActive(true);
+            Controls_UI.SetActive(true);//makes the controls_panel apper
         }
     }
 }

@@ -38,12 +38,10 @@ public class Attack : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.gameObject.name);
     }
 
     private void DoAttack()
     {
-        Debug.Log("Attack");
 
         animator_controller.SetTrigger("attack_anim");//do attack animation
 

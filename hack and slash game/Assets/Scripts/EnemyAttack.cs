@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
 
+    public Animator animation_controller;
     bool canAttack;
     float Timer;
     public float timeToWait = 0.5f;
@@ -25,6 +26,7 @@ public class EnemyAttack : MonoBehaviour
         {
             if (Timer > timeToWait)
             {
+                animation_controller.SetTrigger("Skeleton_Attack");
                 DoAttack();
                 Timer = 0;
             }

@@ -9,8 +9,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;//what shows when game over
     public GameObject completeLevelUI;//what show when level complete
+    public GameObject WinCondition;//ui image and some text explaining what is the win condition
     public SceneFader sceneFader;//scene fader check scene fader script
     public GameObject[] m_enemies;
+    private float countdown = 30f;
+
 
     public void Awake()
     {
@@ -20,7 +23,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         GameIsOver = false;//game not over
-
+        WinCondition.SetActive(true);//see win condition at start of game (incase its not)
         Time.timeScale = 1f;//speed set to normal
     }
     private bool NoEnemies()//counts down how many enemies are left
@@ -44,6 +47,12 @@ public class GameManager : MonoBehaviour
             WinLevel();
         }
 
+        if (countdown <= 0f)
+        {
+            WinCondition.SetActive(false);
+            return;
+        }
+        countdown -= Time.deltaTime;
         if (GameIsOver)
             return;
     }

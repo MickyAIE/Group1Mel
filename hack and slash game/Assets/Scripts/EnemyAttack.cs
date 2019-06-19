@@ -26,7 +26,6 @@ public class EnemyAttack : MonoBehaviour
         {
             if (Timer > timeToWait)
             {
-                animation_controller.SetTrigger("Skeleton_Attack");
                 DoAttack();
                 Timer = 0;
             }
@@ -53,6 +52,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (Vector3.Distance(Player.transform.position, gameObject.transform.position)<attackRange)
         {
+            animation_controller.SetTrigger("Skeleton_Attack");
             playerhp.Health -= 5;
         }
     }

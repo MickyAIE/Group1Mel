@@ -25,7 +25,7 @@ public class FollowPlayer : MonoBehaviour {
 	void Update ()
     {
 
-        animation_controller.SetFloat("enemy_walking_float", agent.velocity.magnitude);
+        animation_controller.SetFloat("enemy_walking_float", agent.velocity.magnitude);//do animation
 
         if (IsInRange() && timer <= 0)
         {
@@ -33,7 +33,7 @@ public class FollowPlayer : MonoBehaviour {
             {
                 agent.isStopped = true;
             }
-            else
+            else//follow
             {
                 agent.isStopped = false;
 

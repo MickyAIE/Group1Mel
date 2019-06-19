@@ -72,9 +72,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ce9d175c4c3544591e11a3abf62c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsOver: 0
   gameOverUI: {fileID: 0}
   completeLevelUI: {fileID: 0}
   sceneFader: {fileID: 114336189671343702}
+  m_enemies:
+  - {fileID: 0}
 --- !u!114 &114262858819569828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -87,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 0}
+  Controls_UI: {fileID: 0}
   menuSceneName: MainMenu
   sceneFader: {fileID: 114336189671343702}
 --- !u!114 &114336189671343702

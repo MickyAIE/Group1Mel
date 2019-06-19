@@ -42,7 +42,6 @@ public class Attack : MonoBehaviour {
 
     private void DoAttack()
     {
-        Debug.Log("Attack");
 
         animator_controller.SetTrigger("attack_anim");//do attack animation
 

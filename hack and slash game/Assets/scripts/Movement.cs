@@ -59,8 +59,9 @@ public class Movement : MonoBehaviour {
         if (Input.GetButton("Vertical") || Input.GetButton("Horizontal"))
         {
             transform.rotation = Quaternion.LookRotation(finalDirection);
-            animation_controller.SetTrigger("Walking");
         }
+
+        animation_controller.SetFloat("walking_float", _rb.velocity.magnitude);
 
         Debug.DrawRay(transform.position + Vector3.up, finalDirection, Color.red, 1);
         /*

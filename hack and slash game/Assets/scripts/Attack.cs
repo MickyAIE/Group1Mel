@@ -38,7 +38,6 @@ public class Attack : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.gameObject.name);
     }
 
     private void DoAttack()

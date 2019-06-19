@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
+    public Animator animation_controller;
     public float speed = 12;
     public float strafeSpeed = 6f;
 
@@ -58,6 +59,7 @@ public class Movement : MonoBehaviour {
         if (Input.GetButton("Vertical") || Input.GetButton("Horizontal"))
         {
             transform.rotation = Quaternion.LookRotation(finalDirection);
+            animation_controller.SetTrigger("Walking");
         }
 
         Debug.DrawRay(transform.position + Vector3.up, finalDirection, Color.red, 1);

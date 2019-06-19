@@ -8,8 +8,8 @@ public class CompleteLevel : MonoBehaviour
 
     public SceneFader sceneFader;
 
-    public string nextLevel = "Level2";
-    public int levelToUnlock = 2;
+    public string nextLevel = "Level2";//put in unity
+    public int levelToUnlock = 2;//put in unity
 
 
     public void Continue()
@@ -22,6 +22,4 @@ public class CompleteLevel : MonoBehaviour
     {
         sceneFader.FadeTo(menuSceneName);
     }
-
-
 }

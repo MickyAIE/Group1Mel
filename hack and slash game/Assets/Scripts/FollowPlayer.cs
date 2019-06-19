@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class FollowPlayer : MonoBehaviour {
 
     public Transform follow;
+    public Animator animation_controller;
 
     NavMeshAgent agent;
     float timer = 0;
@@ -21,13 +22,16 @@ public class FollowPlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (IsInRange() && timer <= 0)
+	void Update ()
+    {
+
+        animation_controller.SetFloat("enemy_walking_float", agent.velocity.magnitude);
+
+        if (IsInRange() && timer <= 0)
         {
             if (Vector3.Distance(follow.position,gameObject.transform.position) < 1f)
             {
                 agent.isStopped = true;
-
             }
             else
             {
@@ -40,7 +44,6 @@ public class FollowPlayer : MonoBehaviour {
         if (Vector3.Distance(follow.position, gameObject.transform.position) < 1f)
         {
             agent.isStopped = true;
-
         }
         else
         {

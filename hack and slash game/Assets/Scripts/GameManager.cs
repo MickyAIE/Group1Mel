@@ -42,17 +42,18 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(NoEnemies() == true)
+        if(NoEnemies() == true)//if no more enemies left win!!!
         {
             WinLevel();
         }
 
-        if (countdown <= 0f)
+        if (countdown <= 0f)//count down for when the win condition text (top of the screen start level) goes away
         {
             WinCondition.SetActive(false);
             return;
         }
         countdown -= Time.deltaTime;
+
         if (GameIsOver)
             return;
     }

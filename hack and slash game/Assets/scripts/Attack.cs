@@ -22,7 +22,7 @@ public class Attack : MonoBehaviour {
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetButton("Fire1"))
         {
             if(weaponselect.weaponOut == true)
             {

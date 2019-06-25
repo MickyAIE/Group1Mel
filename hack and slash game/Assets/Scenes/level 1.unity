@@ -236,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuSceneName: MainMenu
   sceneFader: {fileID: 1394876614}
-  nextLevel: Level 2
+  nextLevel: level 2
   levelToUnlock: 2
 --- !u!114 &29991442
 MonoBehaviour:

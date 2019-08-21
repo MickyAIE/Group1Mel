@@ -14,3 +14,4 @@ Enemy ai
 if player is close enough(find range) move closer
 when enemy enter attack range then attack
 if player leaves find range go back to predetermined area
+Test
